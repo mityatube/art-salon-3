@@ -117,11 +117,11 @@
 
       <div class="contact-wrapper">
         <div class="map-block">
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A829e9cc93cc3215f1f8630e8e2d1050650fe98177820ebfa629e6588aaef3803&amp;source=constructor"
-            frameborder="0"
-            class="map-frame"
-        ></iframe>
+<!--        <iframe-->
+<!--            src="https://yandex.ru/map-widget/v1/?um=constructor%3A829e9cc93cc3215f1f8630e8e2d1050650fe98177820ebfa629e6588aaef3803&amp;source=constructor"-->
+<!--            frameborder="0"-->
+<!--            class="map-frame"-->
+<!--        ></iframe>-->
         </div>
         <div class="contact-info">
           <div>
