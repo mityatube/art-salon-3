@@ -15,9 +15,5 @@
     "vue-router": "^5.0.6",
     "vuetify": "^4.0.6",
     "vuetify-nuxt-module": "^0.19.5"
-  },
-  "devDependencies": {
-    "@yandex/ymaps3-types": "^1.0.19462911",
-    "sass-embedded": "^1.99.0"
   }
 }
