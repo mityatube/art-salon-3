@@ -49,6 +49,7 @@
       v-model="drawer"
       temporary
       location="left"
+      :width="500"
   >
     <v-list>
       <v-list-item

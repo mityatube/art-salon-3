@@ -1,6 +1,6 @@
 <template>
   <v-container class="info-container">
-    <div class="text-content info-container" id="about">
+    <div class="top-text-content text-content info-container" id="about">
       <h2>О салоне</h2>
       <p class="text-body-1 text-medium-emphasis">
         Компонент автоматически адаптируется под мобильные
@@ -19,6 +19,8 @@
       </p>
     </div>
   </v-container>
+  <div class="text-content info-container section-container" id="arts">
+    <h2 class="header-bottom">Картины</h2>
   <section class="main-page">
     <v-container class="info-container">
       <v-row
@@ -31,7 +33,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                src="/images/suzdal.jpeg"
+                src="/images/danilov.jpg"
                 cover
                 class="container-image"
             />
@@ -42,8 +44,7 @@
             md="6"
             class="pr-md-10"
         >
-          <div class="text-content info-container" id="arts">
-            <h2>Картины</h2>
+          <div class="text-content info-container">
             <p class="text-body-1 text-medium-emphasis" style="margin-bottom: 15px">
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
@@ -51,8 +52,6 @@
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
               презентаций услуг и продуктовых страниц.
-            </p>
-            <p class="text-body-1 text-medium-emphasis">
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
               презентаций услуг и продуктовых страниц.
@@ -65,6 +64,9 @@
       </v-row>
     </v-container>
   </section>
+  </div>
+  <div class="text-content info-container section-container" id="handcraft">
+    <h2 class="header-bottom">Народные промыслы</h2>
   <section class="main-page">
     <v-container class="info-container">
       <v-row
@@ -76,8 +78,7 @@
             md="6"
             class="pr-md-10"
         >
-          <div class="text-content info-container" id="handcraft">
-            <h2>Народные промыслы</h2>
+          <div class="text-content info-container">
             <p class="text-body-1 text-medium-emphasis">
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
@@ -100,7 +101,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                src="/images/pokrova.jpeg"
+                src="/images/mihaylov.jpg"
                 cover
                 class="container-image"
             />
@@ -109,21 +110,22 @@
       </v-row>
     </v-container>
   </section>
-  <v-container class="map-container info-container">
+  </div>
+  <v-container class="map-container map-info-container section-container">
     <div class="main-page-content" id="contact">
-      <h2 class="text-white mb-6">Контакты</h2>
+      <h2 class="text-white mb-5">Контакты</h2>
 
       <div class="contact-wrapper">
         <div class="map-block">
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A829e9cc93cc3215f1f8630e8e2d1050650fe98177820ebfa629e6588aaef3803&amp;source=constructor"
-            frameborder="0"
-            class="map-frame"
-        ></iframe>
+          <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A829e9cc93cc3215f1f8630e8e2d1050650fe98177820ebfa629e6588aaef3803&amp;source=constructor"
+              frameborder="0"
+              class="map-frame"
+          ></iframe>
         </div>
         <div class="contact-info">
           <div>
-            <h3 class="text-white mb-4">Режим работы</h3>
+            <h3 class="text-white mb-5">Режим работы</h3>
 
             <div class="schedule-item">
               <span>Пн – Пт</span>
@@ -137,26 +139,32 @@
           </div>
 
           <div class="social-buttons">
+            <h3 class="text-white mb-5">Мы в социальных сетях</h3>
             <v-btn
-                color="primary"
+                color="#E8AC66"
                 prepend-icon="mdi-vk"
-                rounded="l"
-                size="large"
+                width="150px"
                 href="https://vk.com/hudsalonkirov"
                 target="_blank"
             >
               ВКонтакте
+              <template #prepend>
+                <v-icon size="35">mdi-vk</v-icon>
+              </template>
             </v-btn>
 
             <v-btn
-                color="blue"
+                color="#E8AC66"
                 prepend-icon="mdi-telegram"
                 rounded="l"
-                size="large"
+                width="150px"
                 href=" https://t.me/artshopkirov"
                 target="_blank"
             >
               Telegram
+              <template #prepend>
+                <v-icon size="35">mdi-telegram</v-icon>
+              </template>
             </v-btn>
           </div>
         </div>
@@ -165,9 +173,20 @@
   </v-container>
 </template>
 <style scoped>
+.header-bottom {
+  margin-bottom: 10px;
+}
+.map-info-container {
+  max-width: 90%;
+  margin-left: 5%;
+}
+
 .info-container {
-  max-width: 96%;
-  margin-left: 2%;
+  max-width: 94%;
+  margin-left: 3%;
+}
+.section-container {
+  margin-top: 90px;
 }
 
 .map-container {
@@ -176,7 +195,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 30px 150px;
 }
 
 .map-frame {
@@ -197,19 +216,23 @@
 }
 
 .main-page {
-  padding: 100px 40px;
+  padding: 10px 0px;
+}
+
+.top-text-content {
+  padding-top: 90px;
 }
 
 .text-content {
   font-size: 19pt;
-  padding-top: 90px;
   text-align: center;
 }
 
 .container-image {
-  width: 100%;
+  margin-left: 5%;
+  width: 85%;
   min-height: 320px;
-  height: 520px;
+  height: 900px;
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
@@ -220,7 +243,7 @@
 
 .contact-wrapper {
   display: flex;
-  gap: 40px;
+  gap: 70px;
   width: 100%;
   align-items: stretch;
 }
@@ -234,7 +257,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 260px;
+  min-width: 360px;
   color: white;
 }
 
@@ -243,7 +266,7 @@
   justify-content: space-between;
   margin-bottom: 16px;
   font-size: 18px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 8px;
 }
 
@@ -254,8 +277,17 @@
 }
 
 @media (max-width: 960px) {
+  .map-info-container {
+    max-width: 96%;
+    margin-left: 2%;
+  }
+
+  .section-container {
+    margin-top: 70px;
+  }
+
   .main-page {
-    padding: 60px 0;
+    padding: 10px 0;
   }
 
   .text-content {
@@ -263,8 +295,11 @@
   }
 
   .container-image {
-    height: 420px;
-    margin-top: 32px;
+    width: 92%;
+    min-height: 320px;
+    height: 900px;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   }
 
   .contact-wrapper {
@@ -278,9 +313,22 @@
   .contact-info {
     width: 100%;
   }
+
+  .map-container {
+    min-height: 50vh;
+    background-color: #E8AC66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
 }
 
 @media (max-width: 768px) {
+  .section-container {
+    margin-top: 50px;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -304,6 +352,15 @@
 
   .image-wrapper {
     position: relative;
+  }
+
+  .map-container {
+    min-height: 50vh;
+    background-color: #E8AC66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
   }
 }
 </style>
