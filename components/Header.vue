@@ -50,6 +50,7 @@
       temporary
       location="left"
       :width="500"
+      class="drawer-center"
   >
     <v-list>
       <v-list-item
@@ -97,6 +98,9 @@ const menu = [
 
 .nav-link:hover {
   opacity: 0.7;
+}
+.drawer-center {
+  text-align: center;
 }
 
 .nav-link::after {

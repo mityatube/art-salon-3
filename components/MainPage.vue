@@ -113,7 +113,7 @@
   </div>
   <v-container class="map-container map-info-container section-container">
     <div class="main-page-content" id="contact">
-      <h2 class="text-white mb-5">Контакты</h2>
+      <h2 class="header-bottom text-white mb-5">Контакты</h2>
 
       <div class="contact-wrapper">
         <div class="map-block">
@@ -195,7 +195,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 150px;
+  padding: 30px 75px;
 }
 
 .map-frame {
