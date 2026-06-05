@@ -1,6 +1,6 @@
 <template>
-  <v-container class="info-container">
-    <div class="top-text-content text-content info-container" id="about">
+  <v-container class="info-container-about">
+    <div class="top-text-content text-content info-container-about" id="about">
       <h2>О салоне</h2>
       <p class="text-body-1 text-medium-emphasis">
         Компонент автоматически адаптируется под мобильные
@@ -19,32 +19,35 @@
       </p>
     </div>
   </v-container>
-  <div class="text-content info-container section-container" id="arts">
+  <v-divider class="border-opacity-22 divider-margin">
+    <div id="arts"></div>
+  </v-divider>
+  <div class="text-content text-card-container section-container">
     <h2 class="header-bottom">Картины</h2>
   <section class="main-page">
-    <v-container class="info-container">
+    <v-container class="text-card-container">
       <v-row
           align="center"
           justify="space-between"
       >
         <v-col
             cols="12"
-            md="6"
+            md="5"
         >
           <div class="image-wrapper">
             <v-img
                 src="/images/danilov.jpg"
                 cover
-                class="container-image"
+                class="container-image container-image-card-right"
             />
           </div>
         </v-col>
         <v-col
             cols="12"
-            md="6"
+            md="7"
             class="pr-md-10"
         >
-          <div class="text-content info-container">
+          <div class="text-content main-page-content-right">
             <p class="text-body-1 text-medium-emphasis" style="margin-bottom: 15px">
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
@@ -65,7 +68,10 @@
     </v-container>
   </section>
   </div>
-  <div class="text-content info-container section-container" id="handcraft">
+  <v-divider class="border-opacity-22 divider-margin">
+    <div id="handcraft"></div>
+  </v-divider>
+  <div class="text-content info-container section-container">
     <h2 class="header-bottom">Народные промыслы</h2>
   <section class="main-page">
     <v-container class="info-container">
@@ -75,10 +81,10 @@
       >
         <v-col
             cols="12"
-            md="6"
+            md="7"
             class="pr-md-10"
         >
-          <div class="text-content info-container">
+          <div class="text-content text-content-card-left text-card-container main-page-content">
             <p class="text-body-1 text-medium-emphasis">
               Компонент автоматически адаптируется под мобильные
               устройства и отлично подходит для главных экранов,
@@ -97,13 +103,13 @@
         </v-col>
         <v-col
             cols="12"
-            md="6"
+            md="5"
         >
           <div class="image-wrapper">
             <v-img
                 src="/images/mihaylov.jpg"
                 cover
-                class="container-image"
+                class="container-image container-image-card-left"
             />
           </div>
         </v-col>
@@ -111,10 +117,10 @@
     </v-container>
   </section>
   </div>
+  <div id="contact"></div>
   <v-container class="map-container map-info-container section-container">
-    <div class="main-page-content" id="contact">
+    <div class="main-page-content">
       <h2 class="header-bottom text-white mb-5">Контакты</h2>
-
       <div class="contact-wrapper">
         <div class="map-block">
           <iframe
@@ -173,6 +179,10 @@
   </v-container>
 </template>
 <style scoped>
+.divider-margin {
+  margin: 3%;
+}
+
 .header-bottom {
   margin-bottom: 10px;
 }
@@ -181,10 +191,20 @@
   margin-left: 5%;
 }
 
+.info-container-about {
+  max-width: 90%;
+  margin-left: 5%;
+}
+
 .info-container {
   max-width: 94%;
   margin-left: 3%;
 }
+
+.text-card-container {
+  max-width: 100%;
+}
+
 .section-container {
   margin-top: 90px;
 }
@@ -210,9 +230,17 @@
   width: 100%;
 }
 
-.main-page-content h2,
-.main-page-content p {
+.main-page-content-right {
+  width: 80%;
+}
+
+.main-page-content h2{
   text-align: center;
+}
+
+.main-page-content-right p,
+.main-page-content p {
+  text-align: left;
 }
 
 .main-page {
@@ -228,13 +256,23 @@
   text-align: center;
 }
 
+.text-content-card-left {
+  margin-left: 10%;
+}
+
 .container-image {
-  margin-left: 5%;
-  width: 85%;
-  min-height: 320px;
-  height: 900px;
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.container-image-card-left {
+  width: 59%;
+  margin-left: 22%;
+}
+
+.container-image-card-right {
+  width: 55%;
+  margin-left: 26%;
 }
 
 .image-wrapper {
@@ -277,6 +315,37 @@
 }
 
 @media (max-width: 960px) {
+  .divider-margin {
+    margin: 5%;
+  }
+  .container-image-card-left {
+    width: 59%;
+    margin-left: 20%;
+  }
+
+  .container-image-card-right {
+    width: 59%;
+    margin-left: 20%;
+  }
+
+  .text-content-card-left {
+    margin-left: 0%;
+  }
+
+  .main-page-content-right p,
+  .main-page-content p {
+    text-align: center;
+  }
+
+  .main-page-content-right {
+    width: 100%;
+  }
+
+  .text-card-container {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
   .map-info-container {
     max-width: 96%;
     margin-left: 2%;
@@ -295,9 +364,7 @@
   }
 
   .container-image {
-    width: 92%;
-    min-height: 320px;
-    height: 900px;
+    width: 59%;
     border-radius: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   }
@@ -325,6 +392,20 @@
 }
 
 @media (max-width: 768px) {
+  .divider-margin {
+    margin: 7%;
+  }
+
+  .container-image-card-left {
+    width: 57%;
+    margin-left: 22%;
+  }
+
+  .container-image-card-right {
+    width: 57%;
+    margin-left: 22%;
+  }
+
   .section-container {
     margin-top: 50px;
   }
