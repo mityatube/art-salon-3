@@ -19,8 +19,8 @@
       </p>
     </div>
   </v-container>
-  <v-divider class="border-opacity-22 divider-margin">
-    <div id="arts"></div>
+  <div id="arts"></div>
+  <v-divider class="border-opacity-22" style="margin: 5%">
   </v-divider>
   <div class="text-content text-card-container section-container">
     <h2 class="header-bottom">Картины</h2>
@@ -68,8 +68,8 @@
     </v-container>
   </section>
   </div>
-  <v-divider class="border-opacity-22 divider-margin">
-    <div id="handcraft"></div>
+  <div id="handcraft"></div>
+  <v-divider class="border-opacity-22" style="margin: 5%">
   </v-divider>
   <div class="text-content info-container section-container">
     <h2 class="header-bottom">Народные промыслы</h2>
@@ -179,10 +179,6 @@
   </v-container>
 </template>
 <style scoped>
-.divider-margin {
-  margin: 3%;
-}
-
 .header-bottom {
   margin-bottom: 10px;
 }
@@ -315,9 +311,6 @@
 }
 
 @media (max-width: 960px) {
-  .divider-margin {
-    margin: 5%;
-  }
   .container-image-card-left {
     width: 59%;
     margin-left: 20%;
@@ -392,10 +385,6 @@
 }
 
 @media (max-width: 768px) {
-  .divider-margin {
-    margin: 7%;
-  }
-
   .container-image-card-left {
     width: 57%;
     margin-left: 22%;
