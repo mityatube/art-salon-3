@@ -65,15 +65,11 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import {navigationItems} from "~/config/navigation";
 
 const drawer = ref(false)
 
-const menu = [
-  {title: 'О салоне', link: '#about'},
-  {title: 'Картины', link: '#arts'},
-  {title: 'Народные промыслы', link: '#handcraft'},
-  {title: 'Контакты', link: '#contact'}
-]
+const menu = navigationItems
 </script>
 
 <style scoped>

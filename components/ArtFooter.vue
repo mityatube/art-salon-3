@@ -12,10 +12,13 @@
       <div class="footer-block">
         <h4>Навигация</h4>
         <ul>
-          <li class="baseColor"><a href="#about">О салоне</a></li>
-          <li class="baseColor"><a href="#arts">Картины</a></li>
-          <li class="baseColor"><a href="#handcraft">Народные промыслы</a></li>
-          <li class="baseColor"><a href="#contact">Контакты</a></li>
+          <li
+            v-for="item in navigationItems"
+            :key="item.link"
+            class="baseColor"
+          >
+            <a :href="item.link">{{item.title}}</a>
+          </li>
         </ul>
       </div>
 
@@ -44,4 +47,5 @@
   </footer>
 </template>
 <script setup lang="ts">
+import {navigationItems} from "~/config/navigation";
 </script>

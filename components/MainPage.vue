@@ -36,7 +36,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                src="/images/danilov.jpg"
+                :src="sectionsData.paintings.image"
                 cover
                 class="container-image container-image-card-right"
             />
@@ -107,7 +107,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                src="/images/mihaylov.jpg"
+                :src="sectionsData.handcraft.image"
                 cover
                 class="container-image container-image-card-left"
             />
@@ -435,4 +435,5 @@
 }
 </style>
 <script setup lang="ts">
+import {sectionsData} from "~/data/sections";
 </script>
