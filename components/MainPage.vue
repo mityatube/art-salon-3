@@ -36,7 +36,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                :src="sectionsData.paintings.image"
+                :src="app.baseURL + sectionsData.paintings.image"
                 cover
                 class="container-image container-image-card-right"
             />
@@ -107,7 +107,7 @@
         >
           <div class="image-wrapper">
             <v-img
-                :src="sectionsData.handcraft.image"
+                :src="app.baseURL + sectionsData.handcraft.image"
                 cover
                 class="container-image container-image-card-left"
             />
@@ -436,4 +436,6 @@
 </style>
 <script setup lang="ts">
 import {sectionsData} from "~/data/sections";
+
+const { app } = useRuntimeConfig()
 </script>

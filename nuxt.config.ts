@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import {process} from "std-env";
+
 export default defineNuxtConfig({
     ssr: false,
     app: {
-        baseURL: '/art-salon-3/',
+        baseURL: process.env.NODE_ENV === 'production' ? '/art-salon-3/' : '/',
         head: {
             title: "Художественный салон",
             meta: [
