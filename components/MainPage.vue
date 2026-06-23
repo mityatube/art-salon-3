@@ -1,121 +1,22 @@
 <template>
-  <v-container class="info-container-about">
-    <div class="top-text-content text-content info-container-about" id="about">
-      <h2>О салоне</h2>
-      <p class="text-body-1 text-medium-emphasis">
-        Компонент автоматически адаптируется под мобильные
-        устройства и отлично подходит для главных экранов,
-        презентаций услуг и продуктовых страниц. Компонент автоматически адаптируется.
-        Компонент автоматически адаптируется под мобильные
-        устройства и отлично подходит для главных экранов,
-        презентаций услуг и продуктовых страниц.
-        Компонент автоматически адаптируется под мобильные
-        устройства и отлично подходит для главных экранов,
-        презентаций услуг и продуктовых страниц. Компонент автоматически адаптируется. Компонент автоматически
-        адаптируется. Компонент адаптируется.
-        Компонент автоматически адаптируется под мобильные
-        устройства и отлично подходит для главных экранов,
-        презентаций услуг и продуктовых страниц. И презентаций услуг и продуктовых страниц.
-      </p>
-    </div>
-  </v-container>
+  <About/>
   <div id="arts"></div>
   <v-divider class="border-opacity-22" style="margin: 5%">
   </v-divider>
   <div class="text-content text-card-container section-container">
     <h2 class="header-bottom">Картины</h2>
-  <section class="main-page">
-    <v-container class="text-card-container">
-      <v-row
-          align="center"
-          justify="space-between"
-      >
-        <v-col
-            cols="12"
-            md="5"
-        >
-          <div class="image-wrapper">
-            <v-img
-                :src="app.baseURL + sectionsData.paintings.image"
-                cover
-                class="container-image container-image-card-right"
-            />
-          </div>
-        </v-col>
-        <v-col
-            cols="12"
-            md="7"
-            class="pr-md-10"
-        >
-          <div class="text-content main-page-content-right">
-            <p class="text-body-1 text-medium-emphasis" style="margin-bottom: 15px">
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </section>
+    <section class="main-page">
+      <Arts/>
+    </section>
   </div>
   <div id="handcraft"></div>
   <v-divider class="border-opacity-22" style="margin: 5%">
   </v-divider>
   <div class="text-content info-container section-container">
     <h2 class="header-bottom">Народные промыслы</h2>
-  <section class="main-page">
-    <v-container class="info-container">
-      <v-row
-          align="center"
-          justify="space-between"
-      >
-        <v-col
-            cols="12"
-            md="7"
-            class="pr-md-10"
-        >
-          <div class="text-content text-content-card-left text-card-container main-page-content">
-            <p class="text-body-1 text-medium-emphasis">
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-              Компонент автоматически адаптируется под мобильные
-              устройства и отлично подходит для главных экранов,
-              презентаций услуг и продуктовых страниц.
-            </p>
-          </div>
-        </v-col>
-        <v-col
-            cols="12"
-            md="5"
-        >
-          <div class="image-wrapper">
-            <v-img
-                :src="app.baseURL + sectionsData.handcraft.image"
-                cover
-                class="container-image container-image-card-left"
-            />
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </section>
+    <section class="main-page">
+      <Handcraft/>
+    </section>
   </div>
   <div id="contact"></div>
   <v-container class="map-container map-info-container section-container">
@@ -182,12 +83,8 @@
 .header-bottom {
   margin-bottom: 10px;
 }
-.map-info-container {
-  max-width: 90%;
-  margin-left: 5%;
-}
 
-.info-container-about {
+.map-info-container {
   max-width: 90%;
   margin-left: 5%;
 }
@@ -195,10 +92,6 @@
 .info-container {
   max-width: 94%;
   margin-left: 3%;
-}
-
-.text-card-container {
-  max-width: 100%;
 }
 
 .section-container {
@@ -220,59 +113,6 @@
   border: 0;
   border-radius: 10px;
   display: block;
-}
-
-.main-page-content {
-  width: 100%;
-}
-
-.main-page-content-right {
-  width: 80%;
-}
-
-.main-page-content h2{
-  text-align: center;
-}
-
-.main-page-content-right p,
-.main-page-content p {
-  text-align: left;
-}
-
-.main-page {
-  padding: 10px 0px;
-}
-
-.top-text-content {
-  padding-top: 90px;
-}
-
-.text-content {
-  font-size: 19pt;
-  text-align: center;
-}
-
-.text-content-card-left {
-  margin-left: 10%;
-}
-
-.container-image {
-  border-radius: 10px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-}
-
-.container-image-card-left {
-  width: 59%;
-  margin-left: 22%;
-}
-
-.container-image-card-right {
-  width: 55%;
-  margin-left: 26%;
-}
-
-.image-wrapper {
-  position: relative;
 }
 
 .contact-wrapper {
@@ -311,34 +151,6 @@
 }
 
 @media (max-width: 960px) {
-  .container-image-card-left {
-    width: 59%;
-    margin-left: 20%;
-  }
-
-  .container-image-card-right {
-    width: 59%;
-    margin-left: 20%;
-  }
-
-  .text-content-card-left {
-    margin-left: 0%;
-  }
-
-  .main-page-content-right p,
-  .main-page-content p {
-    text-align: center;
-  }
-
-  .main-page-content-right {
-    width: 100%;
-  }
-
-  .text-card-container {
-    max-width: 90%;
-    margin-left: 5%;
-  }
-
   .map-info-container {
     max-width: 96%;
     margin-left: 2%;
@@ -350,16 +162,6 @@
 
   .main-page {
     padding: 10px 0;
-  }
-
-  .text-content {
-    font-size: 17pt;
-  }
-
-  .container-image {
-    width: 59%;
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   }
 
   .contact-wrapper {
@@ -385,26 +187,12 @@
 }
 
 @media (max-width: 768px) {
-  .container-image-card-left {
-    width: 57%;
-    margin-left: 22%;
-  }
-
-  .container-image-card-right {
-    width: 57%;
-    margin-left: 22%;
-  }
-
   .section-container {
     margin-top: 50px;
   }
 
   h1 {
     font-size: 36px;
-  }
-
-  .text-content {
-    font-size: 15pt;
   }
 
   .map-frame {
@@ -420,10 +208,6 @@
     width: 100%;
   }
 
-  .image-wrapper {
-    position: relative;
-  }
-
   .map-container {
     min-height: 50vh;
     background-color: #E8AC66;
@@ -435,7 +219,7 @@
 }
 </style>
 <script setup lang="ts">
-import {sectionsData} from "~/data/sections";
-
-const { app } = useRuntimeConfig()
+import About from "~/components/sections/About.vue";
+import Arts from "~/components/sections/Arts.vue";
+import Handcraft from "~/components/sections/Handcraft.vue";
 </script>

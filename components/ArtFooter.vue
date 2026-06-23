@@ -38,7 +38,6 @@
              target="_blank">ВКонтакте</a>
         </div>
       </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -49,3 +48,72 @@
 <script setup lang="ts">
 import {navigationItems} from "~/config/navigation";
 </script>
+<style scoped>
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.art-footer {
+  background: #2D8062;
+  padding: 80px 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-block h3.logo {
+  font-size: 15pt;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #E8AC66;
+}
+
+.footer-block h4 {
+  font-size: 10pt;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.footer-block p,
+.footer-block a {
+  font-size: 10pt;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.footer-block a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
