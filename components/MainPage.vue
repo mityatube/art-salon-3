@@ -146,7 +146,7 @@
 }
 
 .map-frame {
-  min-width: 400px;
+  min-width: 420px;
   height: 400px;
   border: 0;
   border-radius: 10px;
@@ -169,7 +169,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 360px;
+  min-width: 220px;
   color: white;
 }
 
