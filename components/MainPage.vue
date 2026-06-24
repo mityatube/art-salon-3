@@ -60,7 +60,7 @@
         </div>
         <div class="contact-info">
           <div class="social-buttons">
-            <h3 class="text-white mb-5">Мы в социальных сетях и на картах</h3>
+            <h3 class="text-white mb-5">Мы в социальных сетях</h3>
             <v-btn
                 color="#E8AC66"
                 prepend-icon="mdi-vk"
@@ -146,7 +146,7 @@
 }
 
 .map-frame {
-  width: 100%;
+  min-width: 400px;
   height: 400px;
   border: 0;
   border-radius: 10px;

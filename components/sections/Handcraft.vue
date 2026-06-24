@@ -6,7 +6,7 @@
     >
       <v-col
           cols="12"
-          md="8"
+          md="7"
           class="pr-md-10"
       >
         <div class="text-content text-content-card-left text-card-container main-page-content">
