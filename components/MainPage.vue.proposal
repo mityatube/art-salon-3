@@ -44,21 +44,7 @@
               <span>11:00 – 16:00</span>
             </div>
           </div>
-          <div>
-            <h3 class="text-white mb-5">Свяжитесь с нами</h3>
 
-            <div class="schedule-bottom-item">
-              <span>Телефон</span>
-              <span>+7 (8332) 65-13-40</span>
-            </div>
-
-            <div class="schedule-bottom-item email-margin">
-              <span>Email</span>
-              <span>mail@art-vyatka.ru</span>
-            </div>
-          </div>
-        </div>
-        <div class="contact-info">
           <div class="social-buttons">
             <h3 class="text-white mb-5">Мы в социальных сетях и на картах</h3>
             <v-btn
@@ -111,6 +97,21 @@
                 <img src="/2gis-svgrepo-com.svg" width="35" height="35" alt="2ГИС">
               </template>
             </v-btn>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div>
+            <h3 class="text-white mb-5">Свяжитесь с нами</h3>
+
+            <div class="schedule-item">
+              <span>Телефон</span>
+              <span>+7 (8332) 65-13-40</span>
+            </div>
+
+            <div class="schedule-item">
+              <span>Email</span>
+              <span>mail@art-vyatka.ru</span>
+            </div>
           </div>
         </div>
       </div>
@@ -182,17 +183,6 @@
   padding-bottom: 8px;
 }
 
-.schedule-bottom-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  padding-bottom: 8px;
-}
-
-.email-margin {
-  margin-bottom: 146px
-}
-
 .social-buttons {
   display: flex;
   flex-direction: column;
@@ -207,10 +197,6 @@
 
   .section-container {
     margin-top: 70px;
-  }
-
-  .email-margin {
-    margin-bottom: -10px
   }
 
   .main-page {

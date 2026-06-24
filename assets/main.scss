@@ -84,7 +84,7 @@ h2 {
 }
 
 .main-page-content-right {
-  width: 80%;
+  width: 85%;
 }
 
 .main-page-content-right p,
@@ -97,13 +97,11 @@ h2 {
 }
 
 .container-image-card-left {
-  width: 59%;
   margin-left: 22%;
 }
 
 .container-image-card-right {
-  width: 55%;
-  margin-left: 26%;
+  margin-left: 30%;
 }
 
 .main-page-content {
@@ -115,12 +113,13 @@ h2 {
 }
 
 .text-content-card-left {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .container-image {
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  width: 350px;
 }
 
 .image-wrapper {
@@ -129,12 +128,10 @@ h2 {
 
 @media (max-width: 960px) {
   .container-image-card-left {
-    width: 59%;
     margin-left: 20%;
   }
 
   .container-image-card-right {
-    width: 59%;
     margin-left: 20%;
   }
 

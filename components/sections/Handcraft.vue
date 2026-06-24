@@ -6,7 +6,7 @@
     >
       <v-col
           cols="12"
-          md="7"
+          md="8"
           class="pr-md-10"
       >
         <div class="text-content text-content-card-left text-card-container main-page-content">
@@ -28,7 +28,7 @@
       </v-col>
       <v-col
           cols="12"
-          md="5"
+          md="4"
       >
         <div class="image-wrapper">
           <v-img
