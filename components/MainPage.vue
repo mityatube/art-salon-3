@@ -146,7 +146,6 @@
 }
 
 .map-frame {
-  min-width: 420px;
   height: 400px;
   border: 0;
   border-radius: 10px;
