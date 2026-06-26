@@ -53,13 +53,13 @@ import {navigationItems} from "~/config/navigation";
 </script>
 <style scoped>
 .logo-image-footer {
-  width: 190px;
-  height: 190px;
+  width: 130px;
+  height: 135px;
 }
 
 .art-footer {
   background: #2D8062;
-  padding: 80px 20px 30px;
+  padding: 50px 20px 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 80px;
 }
@@ -67,11 +67,11 @@ import {navigationItems} from "~/config/navigation";
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 50px;
 }
 
 .footer-block h4 {
-  font-size: 14pt;
+  font-size: 11pt;
   margin-bottom: 12px;
   text-transform: uppercase;
   color: #ffffff;
@@ -80,10 +80,10 @@ import {navigationItems} from "~/config/navigation";
 
 .footer-block p,
 .footer-block a {
-  font-size: 14pt;
+  font-size: 111pt;
   color: #ffffff;
   text-decoration: none;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .footer-block a:hover {
