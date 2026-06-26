@@ -18,7 +18,7 @@
       <Handcraft/>
     </section>
   </div>
-  <div id="contact"></div>
+  <div id="contact" style="margin-bottom: 70px"></div>
   <v-container class="map-container map-info-container section-container">
     <div class="main-page-content">
       <h2 class="header-bottom text-white mb-5">Контакты</h2>
@@ -62,7 +62,7 @@
           <div class="social-buttons">
             <h3 class="text-white mb-5">Мы в социальных сетях</h3>
             <v-btn
-                color="#E8AC66"
+                color="#F1C38F"
                 prepend-icon="mdi-vk"
                 width="150px"
                 href="https://vk.com/hudsalonkirov"
@@ -75,7 +75,7 @@
             </v-btn>
 
             <v-btn
-                color="#E8AC66"
+                color="#F1C38F"
                 prepend-icon="mdi-telegram"
                 rounded="l"
                 width="150px"
@@ -89,7 +89,7 @@
             </v-btn>
 
             <v-btn
-                color="#E8AC66"
+                color="#F1C38F"
                 width="150px"
                 href="https://yandex.com/maps/org/khudozhestvenny_salon/1104185169/"
                 target="_blank"
@@ -101,7 +101,7 @@
             </v-btn>
 
             <v-btn
-                color="#E8AC66"
+                color="#F1C38F"
                 width="150px"
                 href="https://2gis.ru/kirov/firm/8163302605593105"
                 target="_blank"
@@ -142,19 +142,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 75px;
+  padding: 15px 35px;
 }
 
 .map-frame {
-  height: 400px;
+  height: 370px;
   border: 0;
   border-radius: 10px;
   display: block;
+  width: 100%;
 }
 
 .contact-wrapper {
   display: flex;
-  gap: 70px;
+  gap: 50px;
   width: 100%;
   align-items: stretch;
 }
@@ -168,7 +169,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 220px;
+  min-width: 250px;
   color: white;
 }
 

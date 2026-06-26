@@ -3,21 +3,24 @@
     <div class="container footer-grid">
 
       <div class="footer-block">
-        <h3 class="logo">Художественный салон</h3>
-        <p class="muted">
-          На Никитской
-        </p>
+        <div class="logo-image-footer">
+          <v-img
+              src="/logoVyatkaArt.svg"
+              class="logo-image mr-3"
+              cover
+          />
+        </div>
       </div>
 
       <div class="footer-block">
         <h4>Навигация</h4>
         <ul>
           <li
-            v-for="item in navigationItems"
-            :key="item.link"
-            class="baseColor"
+              v-for="item in navigationItems"
+              :key="item.link"
+              class="baseColor"
           >
-            <a :href="item.link">{{item.title}}</a>
+            <a :href="item.link">{{ item.title }}</a>
           </li>
         </ul>
       </div>
@@ -49,11 +52,9 @@
 import {navigationItems} from "~/config/navigation";
 </script>
 <style scoped>
-.footer {
-  padding: 40px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #ffffff;
+.logo-image-footer {
+  width: 190px;
+  height: 190px;
 }
 
 .art-footer {
@@ -69,15 +70,8 @@ import {navigationItems} from "~/config/navigation";
   gap: 40px;
 }
 
-.footer-block h3.logo {
-  font-size: 15pt;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  color: #E8AC66;
-}
-
 .footer-block h4 {
-  font-size: 10pt;
+  font-size: 14pt;
   margin-bottom: 12px;
   text-transform: uppercase;
   color: #ffffff;
@@ -86,7 +80,7 @@ import {navigationItems} from "~/config/navigation";
 
 .footer-block p,
 .footer-block a {
-  font-size: 10pt;
+  font-size: 14pt;
   color: #ffffff;
   text-decoration: none;
   line-height: 1.8;

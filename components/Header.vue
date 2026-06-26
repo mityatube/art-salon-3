@@ -22,10 +22,10 @@
       />
 
       <div style="margin-left: 10px;">
-        <div class="text-h6 font-weight-bold text-black">
+        <div class="text-h6 font-weight-bold" style="color: #ffffff">
           Художественный салон
         </div>
-        <div class="text-caption text-grey-darken-1">
+        <div class="text-caption" style="color: #ffffff">
           На Никитской
         </div>
       </div>
@@ -82,13 +82,14 @@ const menu = navigationItems
 
 .border-b {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: #2D8062;
 }
 
 .nav-link {
   position: relative;
-  color: #111;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   transition: opacity 0.2s ease;
 }
 

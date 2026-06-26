@@ -2,7 +2,7 @@
 import {process} from "std-env";
 
 export default defineNuxtConfig({
-    ssr: false,
+    ssr: true,
     app: {
         baseURL: process.env.NODE_ENV === 'production' ? '/art-salon-3/' : '/',
         head: {
