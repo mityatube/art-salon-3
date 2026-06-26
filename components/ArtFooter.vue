@@ -80,7 +80,7 @@ import {navigationItems} from "~/config/navigation";
 
 .footer-block p,
 .footer-block a {
-  font-size: 111pt;
+  font-size: 11pt;
   color: #ffffff;
   text-decoration: none;
   line-height: 1.6;
