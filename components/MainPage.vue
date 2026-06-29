@@ -79,7 +79,7 @@
                 prepend-icon="mdi-telegram"
                 rounded="l"
                 width="150px"
-                href=" https://t.me/artshopkirov"
+                href="https://t.me/artshopkirov"
                 target="_blank"
             >
               Telegram
@@ -116,6 +116,17 @@
       </div>
     </div>
   </v-container>
+  <v-fab
+      v-scroll="onScroll"
+      :active="showScrollTop"
+      location="bottom right"
+      color="#F1C38F"
+      icon="mdi-arrow-up"
+      size="large"
+      @click="scrollToTop"
+      class="scroll-top-fab"
+      style="position: fixed; bottom: 24px; right: 24px; z-index: 1000;"
+  ></v-fab>
 </template>
 <style scoped>
 .header-bottom {
@@ -269,10 +280,25 @@
     justify-content: center;
     padding: 40px 20px;
   }
+
+  .scroll-top-fab {
+    transition: all 0.3s ease;
+  }
 }
 </style>
 <script setup lang="ts">
 import About from "~/components/sections/About.vue";
 import Arts from "~/components/sections/Arts.vue";
 import Handcraft from "~/components/sections/Handcraft.vue";
+
+const showScrollTop = ref(false);
+
+const onScroll = () => {
+  showScrollTop.value = window.scrollY > 300;
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 </script>
