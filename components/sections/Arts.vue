@@ -9,12 +9,23 @@
           md="4"
       >
         <div class="image-wrapper">
-          <v-img
-              alt="Картины. Изображение не загрузилась"
-              :src="app.baseURL + sectionsData.paintings.image"
-              cover
+<!--          <v-img-->
+<!--              alt="Картины. Изображение не загрузилась"-->
+<!--              :src="app.baseURL + sectionsData.paintings.image"-->
+<!--              cover-->
+<!--              class="container-image container-image-card-right"-->
+<!--          />-->
+          <v-carousel
               class="container-image container-image-card-right"
-          />
+              :show-arrows="false">
+            <v-carousel-item
+                v-for="(item,i) in sectionsData.paintings"
+                :key="i"
+                :src="app.baseURL + item.image"
+                alt="Картины. Изображения не загрузились"
+                cover
+            ></v-carousel-item>
+          </v-carousel>
         </div>
       </v-col>
       <v-col
