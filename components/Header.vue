@@ -46,6 +46,7 @@
   </v-app-bar>
 
   <v-navigation-drawer
+      app
       v-model="drawer"
       temporary
       location="left"
