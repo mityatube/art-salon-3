@@ -1,44 +1,41 @@
 <template>
   <About/>
   <div id="arts"></div>
-  <v-divider class="border-opacity-22" style="margin: 5%">
-  </v-divider>
-  <div class="text-content text-card-container section-container">
-    <h2 class="header-bottom">Картины</h2>
-    <section class="main-page">
+  <v-divider class="border-opacity-22 section-divider"></v-divider>
+  <div class="section-block">
+    <h2 class="section-block__title">Картины</h2>
+    <section class="section-block__content">
       <Arts/>
     </section>
   </div>
   <div id="handcraft"></div>
-  <v-divider class="border-opacity-22" style="margin: 5%">
-  </v-divider>
-  <div class="text-content info-container section-container">
-    <h2 class="header-bottom">Народные промыслы</h2>
-    <section class="main-page">
+  <v-divider class="border-opacity-22 section-divider"></v-divider>
+  <div class="section-block">
+    <h2 class="section-block__title">Народные промыслы</h2>
+    <section class="section-block__content">
       <Handcraft/>
     </section>
   </div>
-  <div id="contact" style="margin-bottom: 70px"></div>
+  <div id="contact" style="margin-bottom: 40px"></div>
+  <!--  <v-container class="map-container map-info-container section-block">-->
+  <!--    <div class="section-block__content">-->
   <v-container class="map-container map-info-container section-container">
     <div class="main-page-content">
-      <h2 class="header-bottom text-white mb-5">Контакты</h2>
+      <h3 class="section-block__title text-white mb-5">Контакты</h3>
       <div class="contact-wrapper">
         <div class="map-block">
           <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A829e9cc93cc3215f1f8630e8e2d1050650fe98177820ebfa629e6588aaef3803&amp;source=constructor"
-              frameborder="0"
               class="map-frame"
           ></iframe>
         </div>
         <div class="contact-info">
           <div>
             <h3 class="text-white mb-5">Режим работы</h3>
-
             <div class="schedule-item">
               <span>Пн – Пт</span>
               <span>10:00 – 18:00</span>
             </div>
-
             <div class="schedule-item">
               <span>Сб – Вс</span>
               <span>11:00 – 16:00</span>
@@ -46,69 +43,66 @@
           </div>
           <div>
             <h3 class="text-white mb-5">Свяжитесь с нами</h3>
-
             <div class="schedule-bottom-item">
               <span>Телефон</span>
               <span>+7 (8332) 65-13-40</span>
             </div>
-
             <div class="schedule-bottom-item email-margin">
               <span>Email</span>
               <span>mail@art-vyatka.ru</span>
             </div>
           </div>
-        </div>
-        <div class="contact-info">
           <div class="social-buttons">
-            <h3 class="text-white mb-5">Мы в социальных сетях</h3>
             <v-btn
-                color="#F1C38F"
-                prepend-icon="mdi-vk"
-                width="150px"
+                width="55px"
+                height="55px"
                 href="https://vk.com/hudsalonkirov"
+                variant="plain"
                 target="_blank"
+                class="vk-btn"
             >
-              ВКонтакте
+              <v-tooltip activator="parent" location="top" text="ВКонтакте"></v-tooltip>
               <template #prepend>
-                <v-icon size="35">mdi-vk</v-icon>
+                <v-icon size="45" v-ripple>mdi-vk</v-icon>
               </template>
             </v-btn>
-
             <v-btn
-                color="#F1C38F"
-                prepend-icon="mdi-telegram"
-                rounded="l"
-                width="150px"
+                width="55px"
+                height="55px"
                 href="https://t.me/artshopkirov"
+                variant="plain"
                 target="_blank"
+                class="vk-btn"
             >
-              Telegram
+              <v-tooltip activator="parent" location="top" text="Телеграм"></v-tooltip>
               <template #prepend>
-                <v-icon size="35">mdi-telegram</v-icon>
+                <v-icon size="45" v-ripple>mdi-telegram</v-icon>
               </template>
             </v-btn>
-
             <v-btn
-                color="#F1C38F"
-                width="150px"
+                width="55px"
+                height="55px"
                 href="https://yandex.com/maps/org/khudozhestvenny_salon/1104185169/"
+                variant="plain"
                 target="_blank"
+                class="vk-btn"
             >
-              Яндекс Карты
+              <v-tooltip activator="parent" location="top" text="Яндекс Карты"></v-tooltip>
               <template #prepend>
-                <img src="/yandex-maps-svgrepo-com.svg" width="35" height="35" alt="Яндекс Карты">
+                <img src="/yandex-maps-svgrepo-com.svg" width="45" height="45">
               </template>
             </v-btn>
-
             <v-btn
-                color="#F1C38F"
-                width="150px"
+                width="55px"
+                height="55px"
                 href="https://2gis.ru/kirov/firm/8163302605593105"
+                variant="plain"
                 target="_blank"
+                class="vk-btn"
             >
-              2ГИС
+              <v-tooltip activator="parent" location="top" text="2ГИС"></v-tooltip>
               <template #prepend>
-                <img src="/2gis-svgrepo-com.svg" width="35" height="35" alt="2ГИС">
+                <img src="/2gis-svgrepo-com.svg" width="45" height="45">
               </template>
             </v-btn>
           </div>
@@ -128,23 +122,33 @@
       style="position: fixed; bottom: 24px; right: 24px; z-index: 1000;"
   ></v-fab>
 </template>
+
 <style scoped>
-.header-bottom {
-  margin-bottom: 10px;
+main-page-content {
+  width: 100%;
 }
+
 
 .map-info-container {
   max-width: 90%;
   margin-left: 5%;
 }
 
-.info-container {
-  max-width: 94%;
-  margin-left: 3%;
+.section-divider {
+  margin: 2% 5%;
 }
 
-.section-container {
-  margin-top: 30px;
+.section-block {
+  margin-top: 16px;
+}
+
+.section-block__title {
+  text-align: center;
+}
+
+.section-block__content {
+  padding: 4px 0;
+  max-width: 90%;
 }
 
 .map-container {
@@ -154,14 +158,16 @@
   align-items: center;
   justify-content: center;
   padding: 15px 35px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 .map-frame {
-  height: 370px;
+  height: 380px;
   border: 0;
-  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   display: block;
-  width: 100%;
+  width: 550px;
 }
 
 .contact-wrapper {
@@ -180,7 +186,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 250px;
   color: white;
 }
 
@@ -201,35 +206,37 @@
 }
 
 .email-margin {
-  margin-bottom: 146px
+  margin-bottom: 10px;
 }
 
 .social-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
 }
 
 @media (max-width: 960px) {
-  .map-info-container {
+  .map-container {
     max-width: 96%;
     margin-left: 2%;
+    padding: 30px 20px;
   }
 
-  .section-container {
-    margin-top: 70px;
+  .section-block {
+    margin-top: 30px;
   }
 
   .email-margin {
-    margin-bottom: -10px
+    margin-bottom: 10px;
   }
 
-  .main-page {
-    padding: 10px 0;
+  .section-block__content {
+    padding: 4px 0;
   }
 
   .contact-wrapper {
     flex-direction: column;
+    gap: 20px;
   }
 
   .map-block {
@@ -239,29 +246,15 @@
   .contact-info {
     width: 100%;
   }
-
-  .map-container {
-    min-height: 50vh;
-    background-color: #E8AC66;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
 }
 
 @media (max-width: 768px) {
-  .section-container {
-    margin-top: 50px;
+  .section-block {
+    margin-top: 24px;
   }
 
   h1 {
     font-size: 36px;
-  }
-
-  .map-frame {
-    width: 100%;
-    min-height: 350px;
   }
 
   .contact-wrapper {
@@ -274,11 +267,7 @@
 
   .map-container {
     min-height: 50vh;
-    background-color: #E8AC66;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   .scroll-top-fab {
@@ -286,6 +275,7 @@
   }
 }
 </style>
+
 <script setup lang="ts">
 import About from "~/components/sections/About.vue";
 import Arts from "~/components/sections/Arts.vue";
@@ -298,7 +288,6 @@ const onScroll = () => {
 };
 
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({top: 0, behavior: 'smooth'});
 };
-
 </script>

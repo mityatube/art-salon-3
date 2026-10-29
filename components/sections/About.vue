@@ -1,20 +1,47 @@
 <template>
-  <v-container class="info-container-about">
-    <div class="top-text-content text-content info-container-about" id="about">
-      <h2>О салоне</h2>
-      <p class="text-body-1 text-medium-emphasis">
-        У нас представлен широкий выбор картин современных Вятских художников: живопись, графика и авторские работы для дома, офиса или в подарок. Мы поможем подобрать произведение, которое гармонично дополнит интерьер или станет памятным подарком. Более 25 лет помогаем художникам, студентам, преподавателям и любителям творчества находить качественные художественные материалы. В нашем салоне вы найдёте всё необходимое для живописи, графики, декоративного творчества и оформления готовых работ.
+  <v-container class="section-about">
+    <div class="section-about__content" id="about">
+      <h2>{{ sectionsData.about.title }}</h2>
+      <p class="section-about__text">
+        {{ sectionsData.about.text }}
       </p>
     </div>
   </v-container>
 </template>
+
+<script setup lang="ts">
+import { sectionsData } from "~/data/sections";
+</script>
+
 <style scoped>
-.info-container-about {
+.section-about {
   max-width: 90%;
   margin-left: 5%;
 }
 
-.top-text-content {
+.section-about__content {
   padding-top: 90px;
+  text-align: center;
+}
+
+.section-about__text {
+  font-size: 25px;
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .section-about__content {
+    padding-top: 90px;
+  }
+
+  .section-about__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-about__text {
+    font-size: 18px;
+  }
 }
 </style>

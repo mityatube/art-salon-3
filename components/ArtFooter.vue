@@ -59,9 +59,9 @@ import {navigationItems} from "~/config/navigation";
 
 .art-footer {
   background: #2D8062;
-  padding: 50px 20px 30px;
+  padding: 35px 20px 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .footer-grid {
