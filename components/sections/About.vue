@@ -40,8 +40,12 @@ import { sectionsData } from "~/data/sections";
 }
 
 @media (max-width: 768px) {
+  .section-about {
+    max-width: 80%;
+    margin-left: 10%;
+  }
   .section-about__text {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 </style>

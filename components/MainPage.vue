@@ -270,6 +270,10 @@ main-page-content {
     padding: 30px 20px;
   }
 
+  .map-frame {
+    width: 100%;
+  }
+
   .scroll-top-fab {
     transition: all 0.3s ease;
   }

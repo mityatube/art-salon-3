@@ -83,6 +83,7 @@ const menu = navigationItems
 
 .border-b {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   background: #2D8062;
 }
 
@@ -90,7 +91,7 @@ const menu = navigationItems
   position: relative;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 300;
   transition: opacity 0.2s ease;
 }
 

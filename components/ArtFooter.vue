@@ -14,7 +14,7 @@
 
       <div class="footer-block">
         <h4>Навигация</h4>
-        <ul>
+        <ul style="margin-left: 20px">
           <li
               v-for="item in navigationItems"
               :key="item.link"

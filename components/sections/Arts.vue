@@ -64,7 +64,6 @@ const { app } = useRuntimeConfig()
   max-width: 700px;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  aspect-ratio: 4 / 3;
 }
 
 .section-media__text p {
@@ -97,11 +96,11 @@ const { app } = useRuntimeConfig()
 
 @media (max-width: 768px) {
   .section-media {
-    max-width: 70%;
-    margin-left: 20%;
+    max-width: 80%;
+    margin-left: 15%;
   }
   .section-media__text p {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 </style>
