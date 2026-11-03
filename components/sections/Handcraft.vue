@@ -95,8 +95,12 @@ const { app } = useRuntimeConfig()
 }
 
 @media (max-width: 768px) {
+  .section-media {
+    max-width: 90%;
+    margin-left: 10%;
+  }
   .section-media__text p {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 </style>
