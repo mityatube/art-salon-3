@@ -64,7 +64,7 @@ const { app } = useRuntimeConfig()
 .section-media__text {
   max-width: 80%;
   margin-left: 10%;
-  text-align: right;
+  text-align: center;
 }
 
 .section-media__text p {
@@ -73,34 +73,31 @@ const { app } = useRuntimeConfig()
 }
 
 @media (max-width: 1260px) {
-  .section-media {
-    max-width: 80%;
-    margin-left: 15%;
+  .section-media__text p {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 960px) {
   .section-media__text p {
-    text-align: center;
     font-size: 20px;
-  }
-
-  .section-media__text {
     padding: 12px 0;
   }
 
   .section-media__image {
     max-width: 100%;
+    height: 350px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .section-media {
-    max-width: 90%;
-    margin-left: 10%;
+  .section-media__image {
+    max-width: 80%;
+    margin-left: 15%;
   }
   .section-media__text p {
     font-size: 17px;
+    margin-left: 10%;
   }
 }
 </style>

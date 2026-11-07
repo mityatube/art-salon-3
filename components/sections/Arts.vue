@@ -19,7 +19,6 @@
                 :key="i"
                 :src="app.baseURL + item.image"
                 alt="Картины. Изображения не загрузились"
-                cover
             ></v-carousel-item>
           </v-carousel>
         </div>
@@ -70,6 +69,7 @@ const { app } = useRuntimeConfig()
   margin-left: 2%;
   font-size: 25px;
   line-height: 1.7;
+  text-align: center;
 }
 
 @media (max-width: 1260px) {
@@ -77,27 +77,26 @@ const { app } = useRuntimeConfig()
     max-width: 80%;
     margin-left: 15%;
   }
+  .section-media__text p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 960px) {
-  .section-media__text p {
-    text-align: center;
-    font-size: 20px;
-  }
-
   .section-media__text {
     padding: 12px 0;
   }
 
   .section-media__carousel {
+    height: 350px !important;
     max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .section-media {
-    max-width: 80%;
-    margin-left: 15%;
+  .section-media__carousel {
+    max-width: 90%;
+    margin-left: 7%;
   }
   .section-media__text p {
     font-size: 17px;
