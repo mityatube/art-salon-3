@@ -3,7 +3,7 @@
   <div id="arts"></div>
   <v-divider class="border-opacity-22 section-divider"></v-divider>
   <div class="section-block">
-    <h2 class="section-block__title">Картины</h2>
+    <h3 class="section-block__title">Картины</h3>
     <section class="section-block__content">
       <Arts/>
     </section>
@@ -11,14 +11,12 @@
   <div id="handcraft"></div>
   <v-divider class="border-opacity-22 section-divider"></v-divider>
   <div class="section-block">
-    <h2 class="section-block__title">Народные промыслы</h2>
+    <h3 class="section-block__title">Народные промыслы</h3>
     <section class="section-block__content">
       <Handcraft/>
     </section>
   </div>
   <div id="contact" style="margin-bottom: 40px"></div>
-  <!--  <v-container class="map-container map-info-container section-block">-->
-  <!--    <div class="section-block__content">-->
   <v-container class="map-container map-info-container section-container">
     <div class="main-page-content">
       <h3 class="section-block__title text-white mb-5">Контакты</h3>
@@ -31,7 +29,7 @@
         </div>
         <div class="contact-info">
           <div>
-            <h3 class="text-white mb-5">Режим работы</h3>
+            <h4 class="text-white mb-5">Режим работы</h4>
             <div class="schedule-item">
               <span>Пн – Пт</span>
               <span>10:00 – 18:00</span>
@@ -42,7 +40,7 @@
             </div>
           </div>
           <div>
-            <h3 class="text-white mb-5">Свяжитесь с нами</h3>
+            <h4 class="text-white mb-5">Свяжитесь с нами</h4>
             <div class="schedule-bottom-item">
               <span>Телефон</span>
               <span>+7 (8332) 65-13-40</span>

@@ -1,7 +1,7 @@
 <template>
   <v-container class="section-about">
     <div class="section-about__content" id="about">
-      <h2>{{ sectionsData.about.title }}</h2>
+      <h3>{{ sectionsData.about.title }}</h3>
       <p class="section-about__text">
         {{ sectionsData.about.text }}
       </p>
@@ -15,8 +15,8 @@ import { sectionsData } from "~/data/sections";
 
 <style scoped>
 .section-about {
-  max-width: 90%;
-  margin-left: 5%;
+  max-width: 87%;
+  margin-left: 6%;
 }
 
 .section-about__content {
@@ -29,22 +29,24 @@ import { sectionsData } from "~/data/sections";
   line-height: 1.7;
 }
 
-@media (max-width: 960px) {
-  .section-about__content {
-    padding-top: 90px;
-  }
-
-  .section-about__text {
+@media (max-width: 1260px) {
+  .section-about__content p {
     font-size: 20px;
   }
 }
 
+@media (max-width: 960px) {
+  .section-about__content {
+    padding-top: 90px;
+  }
+}
+
 @media (max-width: 768px) {
-  .section-about {
+  .section-about__content {
     max-width: 80%;
     margin-left: 10%;
   }
-  .section-about__text {
+  .section-about__content p {
     font-size: 17px;
   }
 }
