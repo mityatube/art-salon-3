@@ -3,7 +3,6 @@
   <div id="arts"></div>
   <v-divider class="border-opacity-22 section-divider"></v-divider>
   <div class="section-block">
-    <h3 class="section-block__title">Картины</h3>
     <section class="section-block__content">
       <Arts/>
     </section>
@@ -11,7 +10,6 @@
   <div id="handcraft"></div>
   <v-divider class="border-opacity-22 section-divider"></v-divider>
   <div class="section-block">
-    <h3 class="section-block__title">Народные промыслы</h3>
     <section class="section-block__content">
       <Handcraft/>
     </section>
@@ -87,7 +85,7 @@
             >
               <v-tooltip activator="parent" location="top" text="Яндекс Карты"></v-tooltip>
               <template #prepend>
-                <img src="/yandex-maps-svgrepo-com.svg" width="45" height="45">
+                <img src="/yandex-maps-svgrepo-com.svg" width="45" height="45" class="invert-icon">
               </template>
             </v-btn>
             <v-btn
@@ -100,7 +98,7 @@
             >
               <v-tooltip activator="parent" location="top" text="2ГИС"></v-tooltip>
               <template #prepend>
-                <img src="/2gis-svgrepo-com.svg" width="45" height="45">
+                <img src="/2gis-svgrepo-com.svg" width="45" height="45" class="invert-icon">
               </template>
             </v-btn>
           </div>
@@ -122,10 +120,13 @@
 </template>
 
 <style scoped>
+.invert-icon {
+  filter: brightness(0) invert(1);
+}
+
 main-page-content {
   width: 100%;
 }
-
 
 .map-info-container {
   max-width: 90%;
@@ -213,7 +214,7 @@ main-page-content {
   gap: 16px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1170px) {
   .map-container {
     max-width: 96%;
     margin-left: 2%;
@@ -246,7 +247,7 @@ main-page-content {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 618px) {
   .section-block {
     margin-top: 24px;
   }
@@ -265,7 +266,7 @@ main-page-content {
 
   .map-container {
     min-height: 50vh;
-    padding: 30px 20px;
+    padding: 10px 10px;
   }
 
   .map-frame {

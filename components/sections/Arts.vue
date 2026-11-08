@@ -28,6 +28,7 @@
           md="5"
       >
         <div class="section-media__text">
+          <h3 style="margin-bottom: 11px;">Картины</h3>
           <p>
             {{ sectionsData.arts.text }}
           </p>
@@ -65,7 +66,7 @@ const { app } = useRuntimeConfig()
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
-.section-media__text p {
+.section-media__text {
   margin-left: 2%;
   font-size: 25px;
   line-height: 1.7;

@@ -1,20 +1,28 @@
 export const sectionsData = {
     paintings: [
         {
-            image: 'images/danilov.jpg',
+            image: 'images/Derevnya.jpg',
             title: 'Картины'
         },
         {
-            image: 'images/mihaylov.jpg',
+            image: 'images/Danilov.jpg',
             title: 'Картины'
         },
         {
-            image: 'images/suzdal.jpeg',
+            image: 'images/Mihaylov.jpg',
+            title: 'Картины'
+        },
+        {
+            image: 'images/Teatralqnaya.jpg',
+            title: 'Картины'
+        },
+        {
+            image: 'images/Puchkov.jpg',
             title: 'Картины'
         }
     ],
     handcraft: {
-        image: 'images/pokrova.jpeg',
+        image: 'images/DymkaObr.jpg',
         text: 'В нашем салоне представлены изделия народных промыслов, прежде всего знаменитая Дымковская игрушка — символ Вятского края, а также матрёшки, украшения из натуральных камней и керамика',
         title: 'Народные промыслы'
     },
