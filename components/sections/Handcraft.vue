@@ -10,6 +10,7 @@
           md="7"
       >
         <div class="section-media__text">
+          <h3 class="handcraft-title">Народные промыслы</h3>
           <p>
             {{ sectionsData.handcraft.text }}
           </p>
@@ -39,6 +40,10 @@ const { app } = useRuntimeConfig()
 </script>
 
 <style scoped>
+.handcraft-title {
+  margin-bottom: 11px;
+}
+
 .section-media {
   max-width: 100%;
 }
@@ -90,7 +95,11 @@ const { app } = useRuntimeConfig()
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 838px) {
+  .handcraft-title {
+    margin-left: 15%;
+  }
+
   .section-media__image {
     max-width: 80%;
     margin-left: 15%;
