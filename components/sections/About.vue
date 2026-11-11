@@ -1,26 +1,34 @@
 <template>
-  <v-container class="section-about">
-    <div class="section-about__content" id="about">
-      <h3>{{ sectionsData.about.title }}</h3>
-      <p class="section-about__text">
-        {{ sectionsData.about.text }}
-      </p>
-    </div>
-  </v-container>
+  <div style="background: linear-gradient(180deg, #f4f4f4 5%, #FFFFFF 100%);">
+    <v-container class="section-about">
+      <div class="section-about__content" id="about">
+        <h2 v-if="!mobile">{{ sectionsData.about.title }}</h2>
+        <h3 v-else>{{ sectionsData.about.title }}</h3>
+        <h3 v-if="!mobile">{{ sectionsData.about.subtitle }}</h3>
+        <h4 v-else>{{ sectionsData.about.subtitle }}</h4>
+        <p class="section-about__text">
+          {{ sectionsData.about.text }}
+        </p>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { sectionsData } from "~/data/sections";
+import {sectionsData} from "~/data/sections";
+import {useDisplay} from "vuetify";
+
+const {mobile} = useDisplay();
 </script>
 
 <style scoped>
 .section-about {
-  max-width: 87%;
-  margin-left: 6%;
+  max-width: 80%;
+  margin-left: 10%;
 }
 
 .section-about__content {
-  padding-top: 90px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -37,7 +45,7 @@ import { sectionsData } from "~/data/sections";
 
 @media (max-width: 960px) {
   .section-about__content {
-    padding-top: 90px;
+    padding-top: 120px;
   }
 }
 
@@ -46,6 +54,7 @@ import { sectionsData } from "~/data/sections";
     max-width: 80%;
     margin-left: 10%;
   }
+
   .section-about__content p {
     font-size: 17px;
   }

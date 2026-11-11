@@ -7,7 +7,7 @@
     >
       <v-col
           cols="12"
-          md="7"
+          md="6"
       >
         <div class="section-media__image-wrapper">
           <v-carousel
@@ -25,10 +25,11 @@
       </v-col>
       <v-col
           cols="12"
-          md="5"
+          md="6"
       >
         <div class="section-media__text">
-          <h3 style="margin-bottom: 11px;">{{ sectionsData.arts.title }}</h3>
+          <h3 v-if="!mobile" style="margin-bottom: 11px;">{{ sectionsData.arts.title }}</h3>
+          <h4 v-else style="margin-bottom: 11px; font-size: 17px;">{{ sectionsData.arts.title }}</h4>
           <p>
             {{ sectionsData.arts.text }}
           </p>
@@ -40,14 +41,17 @@
 
 <script setup lang="ts">
 import { sectionsData } from "~/data/sections";
+import { useDisplay } from "vuetify";
 
 const { app } = useRuntimeConfig()
+
+const { mobile } = useDisplay();
 </script>
 
 <style scoped>
 .section-media {
-  max-width: 90%;
-  margin-left: 5%;
+  max-width: 80%;
+  margin-left: 15%;
 }
 
 .section-media :deep(.v-row) {

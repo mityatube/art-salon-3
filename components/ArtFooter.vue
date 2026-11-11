@@ -69,7 +69,7 @@ import { contactInfo } from "~/config/contacts";
   background: #2D8062;
   padding: 35px 20px 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .footer-grid {
@@ -105,8 +105,8 @@ import { contactInfo } from "~/config/contacts";
 }
 
 .footer-bottom {
-  margin-top: 50px;
-  padding-top: 20px;
+  margin-top: 25px;
+  padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   font-size: 12px;

@@ -2,7 +2,6 @@
   <div id="contact" class="contact-anchor"></div>
   <v-container class="map-container map-info-container section-container">
     <div class="main-page-content">
-      <h3 class="section-block__title text-white mb-5">Контакты</h3>
       <div class="contact-wrapper">
         <div class="map-block">
           <iframe
@@ -81,8 +80,7 @@ import { contactInfo } from '~/config/contacts'
 }
 
 .map-info-container {
-  max-width: 90%;
-  margin-left: 5%;
+  max-width: 100%;
 }
 
 .map-container {
@@ -92,7 +90,6 @@ import { contactInfo } from '~/config/contacts'
   align-items: center;
   justify-content: center;
   padding: 15px 35px;
-  border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
@@ -101,7 +98,7 @@ import { contactInfo } from '~/config/contacts'
   border: 0;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   display: block;
-  width: 550px;
+  width: 700px;
 }
 
 .contact-wrapper {
@@ -112,7 +109,6 @@ import { contactInfo } from '~/config/contacts'
 }
 
 .map-block {
-  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -121,6 +117,7 @@ import { contactInfo } from '~/config/contacts'
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  width: 550px;
 }
 
 .contact-link {

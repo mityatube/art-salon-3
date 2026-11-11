@@ -1,0 +1,60 @@
+<template>
+  <v-container class="section-about">
+    <div class="section-about__content" id="about">
+      <h2 v-if="!mobile">{{ sectionsData.about.title }}</h2>
+      <h3 v-else>{{ sectionsData.about.title }}</h3>
+      <h3 v-if="!mobile">{{ sectionsData.about.subtitle }}</h3>
+      <h4 v-else>{{ sectionsData.about.subtitle }}</h4>
+      <p class="section-about__text">
+        {{ sectionsData.about.text }}
+      </p>
+    </div>
+  </v-container>
+</template>
+
+<script setup lang="ts">
+import { sectionsData } from "~/data/sections";
+import { useDisplay } from "vuetify";
+
+const { mobile } = useDisplay();
+</script>
+
+<style scoped>
+.section-about {
+  max-width: 80%;
+  margin-left: 10%;
+  background: linear-gradient(135deg, #FFF5E6 0%, #E8AC66 100%);
+}
+
+.section-about__content {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.section-about__text {
+  font-size: 25px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1260px) {
+  .section-about__content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .section-about__content {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-about__content {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+  .section-about__content p {
+    font-size: 17px;
+  }
+}
+</style>

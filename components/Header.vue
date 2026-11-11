@@ -3,7 +3,7 @@
       app
       elevation="0"
       color="white"
-      height="84"
+      height="110"
       class="px-4 border-b"
   >
     <v-app-bar-nav-icon
@@ -20,15 +20,6 @@
           class="logo-image mr-3"
           cover
       />
-
-      <div style="margin-left: 10px;">
-        <div class="text-h6 font-weight-bold" style="color: #ffffff">
-          Художественный салон
-        </div>
-        <div class="text-caption" style="color: #ffffff">
-          На Никитской
-        </div>
-      </div>
     </NuxtLink>
 
     <v-spacer/>
@@ -75,21 +66,20 @@ const menu = navigationItems
 
 <style scoped>
 .logo-image {
-  width: 52px;
-  height: 52px;
+  width: 88px;
+  height: 88px;
   flex: none;
-  margin-left: 5px;
+  margin-left: 100%;
 }
 
 .border-b {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  background: #2D8062;
 }
 
 .nav-link {
   position: relative;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-weight: 300;
   transition: opacity 0.2s ease;

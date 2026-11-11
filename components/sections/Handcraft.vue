@@ -7,10 +7,11 @@
     >
       <v-col
           cols="12"
-          md="7"
+          md="6"
       >
         <div class="section-media__text">
-          <h3 class="handcraft-title">{{ sectionsData.handcraft.title }}</h3>
+          <h3 v-if="!mobile" class="handcraft-title">{{ sectionsData.handcraft.title }}</h3>
+          <h4 v-else class="handcraft-title">{{ sectionsData.handcraft.title }}</h4>
           <p>
             {{ sectionsData.handcraft.text }}
           </p>
@@ -18,7 +19,7 @@
       </v-col>
       <v-col
           cols="12"
-          md="5"
+          md="6"
       >
         <div class="section-media__image-wrapper">
           <v-img
@@ -35,8 +36,11 @@
 
 <script setup lang="ts">
 import { sectionsData } from "~/data/sections";
+import { useDisplay } from "vuetify";
 
 const { app } = useRuntimeConfig()
+
+const { mobile } = useDisplay();
 </script>
 
 <style scoped>
@@ -66,8 +70,8 @@ const { app } = useRuntimeConfig()
 }
 
 .section-media__text {
-  max-width: 80%;
-  margin-left: 10%;
+  max-width: 70%;
+  margin-left: 20%;
   text-align: center;
 }
 
@@ -95,17 +99,12 @@ const { app } = useRuntimeConfig()
 }
 
 @media (max-width: 838px) {
-  .handcraft-title {
-    margin-left: 15%;
-  }
-
   .section-media__image {
     max-width: 80%;
     margin-left: 15%;
   }
   .section-media__text p {
     font-size: 17px;
-    margin-left: 10%;
   }
 }
 </style>
