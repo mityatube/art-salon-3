@@ -4,7 +4,6 @@
     <v-main>
       <NuxtPage />
     </v-main>
+    <ArtFooter/>
   </v-app>
 </template>
-<script setup lang="ts">
-</script>

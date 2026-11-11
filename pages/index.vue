@@ -1,4 +1,3 @@
 <template>
     <MainPage />
-    <ArtFooter />
 </template>

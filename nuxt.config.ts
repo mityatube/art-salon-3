@@ -6,10 +6,32 @@ export default defineNuxtConfig({
     app: {
         baseURL: process.env.NODE_ENV === 'production' ? '/art-salon-3/' : '/',
         head: {
-            title: "Художественный салон",
+            title: "Художественный салон — Картины и народные промыслы в Кирове",
             meta: [
                 {charset: 'utf-8'},
-                {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                {
+                    name: 'description',
+                    content: 'Художественный салон на Никитской в Кирове. Картины современных вятских художников, Дымковская игрушка, народные промыслы. Более 25 лет на рынке.'
+                },
+                {
+                    property: 'og:title',
+                    content: 'Художественный салон — Картины и народные промыслы в Кирове'
+                },
+                {
+                    property: 'og:description',
+                    content: 'Художественный салон на Никитской в Кирове. Картины современных вятских художников, Дымковская игрушка, народные промыслы.'
+                },
+                {
+                    property: 'og:type',
+                    content: 'website'
+                },
+                {
+                    property: 'og:image',
+                    content: process.env.NODE_ENV === 'production'
+                        ? 'https://mityatube.github.io/art-salon-3/logoVyatkaArt.svg'
+                        : '/logoVyatkaArt.svg'
+                }
             ],
             link: [
                 {

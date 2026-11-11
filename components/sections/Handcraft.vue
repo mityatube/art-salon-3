@@ -10,7 +10,7 @@
           md="7"
       >
         <div class="section-media__text">
-          <h3 class="handcraft-title">Народные промыслы</h3>
+          <h3 class="handcraft-title">{{ sectionsData.handcraft.title }}</h3>
           <p>
             {{ sectionsData.handcraft.text }}
           </p>
@@ -63,7 +63,6 @@ const { app } = useRuntimeConfig()
   aspect-ratio: 4 / 3;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  aspect-ratio: 4 / 3;
 }
 
 .section-media__text {

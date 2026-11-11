@@ -1,4 +1,6 @@
-export const sectionsData = {
+import type { SectionsData } from '~/types/sections'
+
+export const sectionsData: SectionsData = {
     paintings: [
         {
             image: 'images/Derevnya.jpg',

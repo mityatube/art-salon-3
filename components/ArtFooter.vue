@@ -5,7 +5,7 @@
       <div class="footer-block">
         <div class="logo-image-footer">
           <v-img
-              src="/logoVyatkaArt.svg"
+              :src="useRuntimeConfig().app.baseURL + 'logoVyatkaArt.svg'"
               class="logo-image mr-3"
               cover
           />
@@ -27,18 +27,23 @@
 
       <div class="footer-block">
         <h4>Контакты</h4>
-        <p>Киров, ул. Никитская, 99А</p>
-        <p>+7 (8332) 65-13-40</p>
-        <p>mail@art-vyatka.ru</p>
+        <p>{{ contactInfo.address }}</p>
+        <p><a :href="contactInfo.phoneHref" class="footer-link">{{ contactInfo.phone }}</a></p>
+        <p><a :href="contactInfo.emailHref" class="footer-link">{{ contactInfo.email }}</a></p>
       </div>
 
       <div class="footer-block">
         <h4>Соцсети</h4>
         <div class="socials">
-          <a href=" https://t.me/artshopkirov"
-             target="_blank">Telegram</a>
-          <a href="https://vk.com/hudsalonkirov"
-             target="_blank">ВКонтакте</a>
+          <a
+              v-for="social in contactInfo.socials.filter(s => !s.isSvg)"
+              :key="social.name"
+              :href="social.href"
+              target="_blank"
+              class="footer-link"
+          >
+            {{ social.tooltip }}
+          </a>
         </div>
       </div>
     </div>
@@ -48,9 +53,12 @@
     </div>
   </footer>
 </template>
+
 <script setup lang="ts">
-import {navigationItems} from "~/config/navigation";
+import { navigationItems } from "~/config/navigation";
+import { contactInfo } from "~/config/contacts";
 </script>
+
 <style scoped>
 .logo-image-footer {
   width: 130px;
@@ -86,8 +94,14 @@ import {navigationItems} from "~/config/navigation";
   line-height: 1.6;
 }
 
-.footer-block a:hover {
+.footer-link {
   color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
 }
 
 .footer-bottom {

@@ -28,7 +28,7 @@
           md="5"
       >
         <div class="section-media__text">
-          <h3 style="margin-bottom: 11px;">Картины</h3>
+          <h3 style="margin-bottom: 11px;">{{ sectionsData.arts.title }}</h3>
           <p>
             {{ sectionsData.arts.text }}
           </p>
