@@ -1,5 +1,5 @@
 <template>
-  <div style="background: linear-gradient(180deg, #f4f4f4 5%, #FFFFFF 100%);">
+  <div class="d-flex justify-center" style="background: linear-gradient(180deg, #f4f4f4 5%, #FFFFFF 100%);">
     <v-container class="section-about">
       <div class="section-about__content" id="about">
         <h2 v-if="!mobile">{{ sectionsData.about.title }}</h2>
@@ -12,6 +12,7 @@
       </div>
     </v-container>
   </div>
+
 </template>
 
 <script setup lang="ts">
@@ -23,8 +24,7 @@ const {mobile} = useDisplay();
 
 <style scoped>
 .section-about {
-  max-width: 80%;
-  margin-left: 10%;
+  max-width: 55%;
 }
 
 .section-about__content {
@@ -49,7 +49,11 @@ const {mobile} = useDisplay();
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 765px) {
+  .section-about {
+    max-width: 85%;
+  }
+
   .section-about__content {
     max-width: 80%;
     margin-left: 10%;

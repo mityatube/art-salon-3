@@ -4,6 +4,7 @@
         align="center"
         justify="space-between"
         :dense="true"
+        class="flex-column-on-mobile"
     >
       <v-col
           cols="12"
@@ -59,20 +60,21 @@ const { mobile } = useDisplay();
 .section-media__image-wrapper {
   display: flex;
   justify-content: center;
+  padding-left: 11%;
 }
 
 .section-media__image {
-  width: 100%;
-  max-width: 700px;
+  width: 64%;
   aspect-ratio: 4 / 3;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 .section-media__text {
-  max-width: 70%;
-  margin-left: 20%;
+  margin-left: 10%;
   text-align: center;
+  padding-left: 10%;
+  max-width: 80%;
 }
 
 .section-media__text p {
@@ -94,14 +96,16 @@ const { mobile } = useDisplay();
 
   .section-media__image {
     max-width: 100%;
-    height: 350px !important;
+  }
+
+  .flex-column-on-mobile {
+    align-items: center !important;
   }
 }
 
-@media (max-width: 838px) {
+@media (max-width: 768px) {
   .section-media__image {
-    max-width: 80%;
-    margin-left: 15%;
+    max-width: 100%;
   }
   .section-media__text p {
     font-size: 17px;

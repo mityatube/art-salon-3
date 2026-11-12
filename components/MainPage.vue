@@ -1,7 +1,9 @@
 <template>
   <About/>
+  <div class="section-about__banner">
+    <img src="/images/Derevnya.jpg" alt="Деревня" class="section-about__banner-image" />
+  </div>
   <div id="arts"></div>
-  <v-divider class="border-opacity-22 section-divider"></v-divider>
   <div class="section-block">
     <section class="section-block__content">
       <Arts/>
@@ -80,6 +82,29 @@ const scrollToTop = () => {
 
   .scroll-top-fab {
     transition: all 0.3s ease;
+  }
+}
+
+.section-about__banner {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.section-about__banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 765px) {
+  .section-about__banner {
+    margin-top: 40px;
+  }
+
+  .section-about__banner-image {
+    border-radius: 8px;
   }
 }
 </style>

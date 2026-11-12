@@ -177,7 +177,7 @@ import { contactInfo } from '~/config/contacts'
   }
 }
 
-@media (max-width: 618px) {
+@media (max-width: 782px) {
   .contact-wrapper {
     flex-direction: column;
   }

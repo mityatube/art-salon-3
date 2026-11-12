@@ -4,6 +4,7 @@
         align="center"
         justify="space-between"
         :dense="true"
+        class="flex-column-on-mobile"
     >
       <v-col
           cols="12"
@@ -65,13 +66,11 @@ const { mobile } = useDisplay();
 
 .section-media__carousel {
   width: 100%;
-  max-width: 700px;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 .section-media__text {
-  margin-left: 2%;
   font-size: 25px;
   line-height: 1.7;
   text-align: center;
@@ -96,12 +95,15 @@ const { mobile } = useDisplay();
     height: 350px !important;
     max-width: 100%;
   }
+
+  .flex-column-on-mobile {
+    align-items: center !important;
+  }
 }
 
 @media (max-width: 768px) {
   .section-media__carousel {
-    max-width: 90%;
-    margin-left: 7%;
+    max-width: 100%;
   }
   .section-media__text p {
     font-size: 17px;
