@@ -106,7 +106,7 @@ const { mobile } = useDisplay();
     max-width: 100%;
   }
   .section-media__text p {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 </style>

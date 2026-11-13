@@ -28,7 +28,7 @@ const {mobile} = useDisplay();
 }
 
 .section-about__content {
-  padding-top: 120px;
+  padding-top: 88px;
   text-align: center;
 }
 
@@ -60,7 +60,7 @@ const {mobile} = useDisplay();
   }
 
   .section-about__content p {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 </style>

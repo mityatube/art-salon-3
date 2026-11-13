@@ -1,7 +1,7 @@
 <template>
   <About/>
   <div class="section-about__banner">
-    <img src="/images/Derevnya.jpg" alt="Деревня" class="section-about__banner-image" />
+    <img src="/images/derevnya_doma.jpg" alt="Деревня" class="section-about__banner-image" />
   </div>
   <div id="arts"></div>
   <div class="section-block">
@@ -10,7 +10,7 @@
     </section>
   </div>
   <div id="handcraft"></div>
-  <v-divider class="border-opacity-22 section-divider"></v-divider>
+  <v-divider class="border-opacity-25 section-divider"></v-divider>
   <div class="section-block">
     <section class="section-block__content">
       <Handcraft/>
@@ -49,15 +49,11 @@ const scrollToTop = () => {
 
 <style scoped>
 .section-divider {
-  margin: 2% 5%;
+  margin: 3% 5%;
 }
 
 .section-block {
   margin-top: 16px;
-}
-
-.section-block__title {
-  text-align: center;
 }
 
 .section-block__content {
@@ -87,7 +83,8 @@ const scrollToTop = () => {
 
 .section-about__banner {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .section-about__banner-image {
@@ -95,16 +92,11 @@ const scrollToTop = () => {
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 12px;
 }
 
 @media (max-width: 765px) {
   .section-about__banner {
     margin-top: 40px;
-  }
-
-  .section-about__banner-image {
-    border-radius: 8px;
   }
 }
 </style>

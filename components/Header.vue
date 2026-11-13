@@ -3,7 +3,7 @@
       app
       elevation="0"
       color="white"
-      height="110"
+      height="84"
       class="px-4 border-b"
   >
     <v-app-bar-nav-icon
@@ -66,10 +66,10 @@ const menu = navigationItems
 
 <style scoped>
 .logo-image {
-  width: 88px;
-  height: 88px;
+  width: 52px;
+  height: 52px;
   flex: none;
-  margin-left: 100%;
+  margin-left: 22%;
 }
 
 .border-b {

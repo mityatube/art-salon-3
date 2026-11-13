@@ -3,7 +3,7 @@ import type { SectionsData } from '~/types/sections'
 export const sectionsData: SectionsData = {
     paintings: [
         {
-            image: 'images/Derevnya.jpg',
+            image: 'images/Puchkov.jpg',
             title: 'Картины'
         },
         {
@@ -19,7 +19,7 @@ export const sectionsData: SectionsData = {
             title: 'Картины'
         },
         {
-            image: 'images/Puchkov.jpg',
+            image: 'images/Derevnya.jpg',
             title: 'Картины'
         }
     ],
